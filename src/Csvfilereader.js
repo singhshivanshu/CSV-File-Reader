@@ -12,19 +12,13 @@ function Csvfilereader() {
       return;
     }
 
-
-   //Api to read the contents of file that we are passing 
+    //Api to read the contents of file that we are passing
     let readFile = new FileReader();
-    
-    
-    
+
     //running a function when readFile is loaded
-    
-    
+
     readFile.onload = function (e) {
-
       let contents = e.target.result;
-
 
       let lines = contents.split("\n");
 
@@ -32,10 +26,8 @@ function Csvfilereader() {
 
       let title = lines[0].split(",");
 
-      
       //algorithm to change uploaded csv file into json
 
-      
       for (let i = 1; i < lines.length; i++) {
         let obj = {};
         let currentline = lines[i].split(",");
@@ -51,10 +43,9 @@ function Csvfilereader() {
     readFile.readAsText(file);
   };
 
-
   return (
     <div>
-      <Fileuploader onUpload={uploadFileHandler}/>
+      <Fileuploader onUpload={uploadFileHandler} />
       <br />
       {content && (
         <React.Fragment>

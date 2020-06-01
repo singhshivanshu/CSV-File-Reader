@@ -1,4 +1,4 @@
-# Star Apps Assignment
+# CSV file reader
 
 
 ## About
