@@ -1,5 +1,5 @@
 {
-  "name": "starapp",
+  "name": "csv-file-reader",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
